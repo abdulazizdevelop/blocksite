@@ -1,0 +1,32 @@
+
+{% extends "base2.html" %}
+{% load static %}
+
+{% block content %} 
+
+<div>
+    <form type = 'post'>
+        {% csrf_token %}
+        <br><label>
+           <input type ='text' placeholder ='enter firstname' name ='firstname' id ='firstname' />  
+        </label></br>
+        <br><label>
+            <input type ='text' placeholder ='enter lastname' name ='lastname' id ='lastname' /> 
+        </label></br>
+        <br><label>
+         <input type ='tel' placeholder ='telfon raqam' name ='phone' id ='phone' /> 
+        </label></br>
+        <br> <label>
+            <input type ='password' placeholder ='enter password' name ='password' id ='password' /> 
+         </label></br>
+         <br><label>
+            <input type ='password' placeholder ='again enter password' name ='password2' id ='password2' /> 
+         </label></br>
+         {% comment %} <br><label>
+            <input type ='number' placeholder2 ='' name ='password' id ='password' /> 
+         </label></br> {% endcomment %}
+         <button type = 'submit' > register </button>
+    </form>
+</div>
+
+{% endblock content %}
